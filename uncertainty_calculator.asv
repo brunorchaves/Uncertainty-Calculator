@@ -1,0 +1,7 @@
+
+user_in = inputdlg('Enter your function:','Function'); % '2*x + 4'
+fh = str2func(['@(x) ' user_in]);
+
+% the function created from the user input is evaluated 
+x = fminsearch(fh,x0);
+funcUncertain = matlabFunction(funcUnc_sym);
